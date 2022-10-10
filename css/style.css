@@ -26,27 +26,23 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: yellowgreen; */
 }
 /* Small */
 @media (min-width: 768px) {
   .container {
     width: 750px;
-    /* background-color: red; */
   }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 800px;
-    /* background-color: green; */
   }
 }
 /* Large */
 @media (min-width: 1200px) {
   .container {
     width: 900px;
-    /* background-color: blue; */
   }
 }
 
@@ -83,7 +79,6 @@ body > .container {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  /* margin-bottom: 20px; */
 }
 .taskEnter input {
   flex: 1;
@@ -112,7 +107,7 @@ body > .container {
   cursor: pointer;
 }
 .taskEnter button:hover {
-  background-color: #0d69d5 !important;
+  background-color: var(--main-alt-color) !important;
 }
 
 .content {
@@ -150,7 +145,6 @@ body > .container {
   display: block;
 }
 
-/* Details start */
 .details {
   display: flex;
   justify-content: space-between;
@@ -165,14 +159,26 @@ body > .container {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 767px) {
+  .details {
+    flex-direction: column;
+  }
+  .details ul {
+    margin: 15px 0px;
+  }
+}
 .details ul li {
+  background-color: #f6f6f6;
+  padding: 0 10px;
   cursor: pointer;
 }
-.details ul li.active {
-  color: var(--main-color);
-}
+.details ul li.active,
 .details ul li:hover {
-  color: var(--main-alt-color);
+  background-color: var(--main-color);
+  color: #fff;
+}
+.details ul li.active:hover {
+  background-color: var(--main-alt-color);
 }
 .details #clearCompleted {
   cursor: pointer;
@@ -180,4 +186,3 @@ body > .container {
 .details #clearCompleted:hover {
   color: var(--main-alt-color);
 }
-/* Details end */
