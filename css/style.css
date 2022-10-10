@@ -80,6 +80,7 @@ body > .container {
   align-items: center;
   gap: 10px;
 }
+
 .taskEnter input {
   flex: 1;
   height: 50px;
@@ -105,6 +106,14 @@ body > .container {
   -moz-box-shadow: 2px 2px 1px -1px #ddd;
   box-shadow: 2px 2px 1px -1px #ddd;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .taskEnter {
+    flex-wrap: wrap;
+  }
+  .taskEnter button {
+    width: 100%;
+  }
 }
 .taskEnter button:hover {
   background-color: var(--main-alt-color) !important;
@@ -164,7 +173,7 @@ body > .container {
     flex-direction: column;
   }
   .details ul {
-    margin: 15px 0px;
+    margin: 10px 0px;
   }
 }
 .details ul li {
