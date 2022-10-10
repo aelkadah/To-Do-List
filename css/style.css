@@ -64,7 +64,7 @@ header .container > h1::before {
   width: 60%;
   height: 14px;
   transform: skew(-12deg) translateX(-50%);
-  background: rgba(0, 117, 255, 0.2);
+  background: #0075ff90;
   z-index: -1;
 }
 body > .container {
