@@ -176,6 +176,7 @@ tabsLis.forEach(function (tabLi) {
       emptyText.classList.remove("active");
       list.innerHTML = "";
       loadActive();
+      checking();
     } else if (this.getAttribute("id") == "active") {
       if (
         localStorage.getItem("activeLocal") == null ||
@@ -194,8 +195,8 @@ tabsLis.forEach(function (tabLi) {
           list.appendChild(task);
         }
         // -----------------------------------------------
-        checking();
       }
+      checking();
     } else {
       if (
         localStorage.getItem("completedLocal") == null ||
@@ -216,6 +217,7 @@ tabsLis.forEach(function (tabLi) {
           list.appendChild(task);
         }
       }
+      checking();
     }
   });
 });
